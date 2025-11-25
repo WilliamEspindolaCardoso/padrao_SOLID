@@ -86,3 +86,47 @@ class ImpressoraSimples implements Imprimivel {}
 class ImpressoraAvancada implements Imprimivel, Escaneavel, Fax {}
 
 👉 Cada classe implementa só o que realmente usa.
+
+
+
+=======================================================================
+
+Pesquisar sobre o padrão GRASP e escolher dois deles (duas letras).
+
+1. Creator (Criador)
+
+Ele ajuda você a escolher qual classe é a responsável por instanciar outra classe.
+Quem tem os dados cria.
+
+✔ Exemplo:
+
+Quem deve criar um objeto?
+R.: a Turma pode criar Aluno, porque ela “contém” alunos.
+
+Regra simples:
+a classe que tem os dados necessários para criar outra, deve ser a criadora.
+
+________________________________________________________________________________________________
+
+9. Protected Variations (Variações Protegidas)
+
+Protege o sistema contra mudanças inesperadas.
+
+Quando algo no sistema pode mudar, proteja o resto do código dessa mudança usando interfaces, abstrações ou pontos de variação, ou seja, se uma parte do seu código é instável, isole essa parte atrás de uma camada.
+
+
+✔ Exemplo:
+Imagine uma TV.
+Ela tem um controle remoto.
+
+Você pode trocar de marca de TV,
+mas o controle sempre tem os botões:
+
+- ligar
+- desligar
+- aumentar volume
+- diminuir volume
+
+Ou seja:
+A interface não muda
+A implementação interna pode ser totalmente diferente
